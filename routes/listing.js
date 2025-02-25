@@ -3,7 +3,7 @@ const router = express.Router();
 const ExpressError = require("../utils/ExpressError");
 const Listing = require("../models/listings");
 const { listingSchema, reviewSchema } = require("../schema");
-
+const { isLoggedIn } = require("../middleware");
 
 //Index Route
 router.get("/",async (req, res) => {
@@ -12,7 +12,7 @@ router.get("/",async (req, res) => {
 });
 
 //New Route
-router.get("/new", (req, res) => {
+router.get("/new",isLoggedIn, (req, res) => {
     res.render("listings/new.ejs");
 });
 
@@ -28,7 +28,7 @@ router.get("/:id",async (req, res) => {
 });
 
 //create route
-router.post("/",
+router.post("/",isLoggedIn,
     async (req, res) => {
     try {
         const listing = new Listing(req.body.listing);
@@ -42,7 +42,7 @@ router.post("/",
 });
 
 //edit route
-router.get("/:id/edit",async (req, res) => {
+router.get("/:id/edit",isLoggedIn,async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
     if (!listing) {
@@ -54,7 +54,7 @@ router.get("/:id/edit",async (req, res) => {
 });
 
 //update route
-router.put("/:id",async (req, res) => {
+router.put("/:id",isLoggedIn,async (req, res) => {
     let { id } = req.params;
     await Listing.findByIdAndUpdate(id, req.body.listing);
     req.flash("success", "Successfully updated a listing!");
@@ -62,7 +62,7 @@ router.put("/:id",async (req, res) => {
 });
 
 //delete route
-router.delete("/:id", async (req, res) => {
+router.delete("/:id",isLoggedIn, async (req, res) => {
     let { id } = req.params;
     await Listing.findByIdAndDelete(id);
     req.flash("success", "Successfully deleted a listing!");
