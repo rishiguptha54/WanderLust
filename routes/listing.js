@@ -25,7 +25,7 @@ router.get("/new",isLoggedIn,listingController.renderNewForm);
 router
     .route("/:id")
     .get(listingController.showListing)
-    .put(isLoggedIn,isOwner,validateListing,listingController.updateListing)
+    .put(isLoggedIn,isOwner,upload.single("listing[image]"),validateListing,listingController.updateListing)
     .delete(isLoggedIn,isOwner,listingController.destroyListing);
 
 
