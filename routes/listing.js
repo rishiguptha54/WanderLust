@@ -5,11 +5,19 @@ const { listingSchema, reviewSchema } = require("../schema");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware");
 
 const listingController = require("../controllers/listings");
+const multer = require("multer");
+const { storage } = require("../cloudConfig");
+
+const upload = multer({ storage });
 
 router
     .route("/")
     .get(listingController.index)
-    .post(isLoggedIn,validateListing,listingController.createListing);
+    .post(isLoggedIn,
+        upload.single("listing[image]"),
+        validateListing,
+        listingController.createListing
+    );
 
 //New Route
 router.get("/new",isLoggedIn,listingController.renderNewForm);
