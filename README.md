@@ -60,3 +60,7 @@ With a modern and intuitive UI, secure authentication, and a robust backend, Wan
 💡 Your feedback matters! Feel free to contribute, suggest features, or report issues.
 
 🔜 Stay tuned for further improvements & commits! 📌✨
+
+
+MVP
+MAP
