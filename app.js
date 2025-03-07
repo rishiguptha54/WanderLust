@@ -86,14 +86,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.get("/demouser", async (req, res) => {
-//     let fakeUser = new User({
-//     email: "student@gmail.com",
-//     username: "delta-student"
-//     });
-//     let registeredUser = await User.register(fakeUser, "helloworld");
-//     res.send(registeredUser);
-// });
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews",reviewsRouter);
 app.use("/",userRouter);
@@ -103,5 +95,5 @@ app.listen(8080, () => {
 });
 
 app.all("*", (req, res)=> {
-    res.status(404).send("Page not found...............!");
+    res.redirect("/listings");           //start with /listings
 });
