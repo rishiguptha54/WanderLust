@@ -1,66 +1,49 @@
-
-
 # 🌍 WanderLust – Your Gateway to Memorable Stays 🏡✨
 
-📌 Project Overview
+📌 **Project Overview**
 
-WanderLust is a full-stack web application inspired by Airbnb, designed to provide users with a seamless and immersive experience in finding, booking, and managing vacation rentals. Whether you're an avid traveler looking for unique stays or a host wanting to list your property, WanderLust makes the process effortless and enjoyable.
+WanderLust is a full-stack web application inspired by Airbnb, designed to provide users with a seamless and immersive experience in finding, booking, and managing vacation rentals. Built using the **MVP (Model-View-Presenter)** architecture, which is widely adopted in production development by leading companies, WanderLust ensures a scalable and maintainable codebase.  
 With a modern and intuitive UI, secure authentication, and a robust backend, WanderLust bridges the gap between travelers and property owners, ensuring a smooth booking experience.
 
-🚀 Features
+🚀 **Features**
 
-🏠 For Guests:
+### 🏠 For Guests:
+- ✅ **🔍 Search & Discover** – Explore a variety of properties based on location, amenities, and pricing.  
+- ✅ **📅 Booking System** – Reserve your favorite stay with a seamless booking process.  
+- ✅ **❤️ Wishlist** – Save your dream destinations and plan your travels effortlessly.  
+- ✅ **⭐ Reviews & Ratings** – Make informed decisions by reading reviews from other travelers.  
 
-✅ 🔍 Search & Discover – Explore a variety of properties based on location, amenities, and pricing.
+### 🔒 Security & Authentication:
+- ✅ **🔐 User Authentication** – Secure sign-up and login using JWT authentication.  
+- ✅ **🛡️ Role-Based Access** – Separate dashboards for guests and hosts.  
 
-✅ 📅 Booking System – Reserve your favorite stay with a seamless booking process.
+### 🗺️ Map Feature:
+- ✅ **📍 Integrated Map** – Powered by **Mapbox** to provide an interactive and user-friendly experience for exploring property locations.  
 
-✅ ❤️ Wishlist – Save your dream destinations and plan your travels effortlessly.
+### 🎨 User Experience:
+- ✅ **📱 Responsive Design** – Fully optimized for mobile and desktop users.  
+- ✅ **💫 Smooth Animations** – A polished UI for a delightful user experience.  
 
-✅ ⭐ Reviews & Ratings – Make informed decisions by reading reviews from other travelers.
+🛠 **Tech Stack**
 
-🔒 Security & Authentication:
+### 🌐 Frontend:
+- ⚛️ **React.js** – For building an interactive and dynamic UI.  
+- 🎨 **Tailwind CSS / Bootstrap** – Ensuring a sleek and responsive design.  
 
-✅ 🔐 User Authentication – Secure sign-up and login using JWT authentication.
+### ⚙ Backend:
+- 🌿 **Node.js** – For handling API requests.  
+- 🚀 **Express.js** – Lightweight and efficient backend framework.  
+- 🗄 **MVP Architecture** – Ensures modularity and ease of maintenance.  
 
-✅ 🛡️ Role-Based Access – Separate dashboards for guests and hosts.
+### 🛢 Database:
+- 🛢 **MongoDB Atlas** – For securely storing user and property data.  
 
+### ☁️ Cloud & Deployment:
+- ☁️ **AWS via Render** – Deployed using **Render** with AWS for scalability and reliability.  
 
-🎨 User Experience:
+### 🌍 Additional Integrations:
+- 🗺️ **Mapbox API** – For enhanced location-based services.  
 
-✅ 📱 Responsive Design – Fully optimized for mobile and desktop users.
-
-✅ 🗺️ Interactive Maps – Integrated maps for better property visualization.
-
-✅ 💫 Smooth Animations – A polished UI for a delightful user experience.
-
-
-🛠 Tech Stack
-
-🌐 Frontend:
-
-⚛️ React.js – For building an interactive and dynamic UI.
-
-🎨 Tailwind CSS / Bootstrap – Ensuring a sleek and responsive design.
-
-⚙ Backend:
-
-🌿 Node.js – For handling API requests.
-
-🚀 Express.js – Lightweight and efficient backend framework.
-
-🛢 MongoDB  – Storing user and property data securely.
-
-☁️ Additional Integrations:
-
-🗺️ Google Maps / OpenStreetMap API – To enhance location-based services.
-
-
-
-💡 Your feedback matters! Feel free to contribute, suggest features, or report issues.
+💡 **Your feedback matters!** Feel free to contribute, suggest features, or report issues.
 
 🔜 Stay tuned for further improvements & commits! 📌✨
-
-
-MVP
-MAP
